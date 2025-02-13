@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<head>
+  <title>MOJISANNNNNN</title>
+  <style>
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: center;
+    }
+    
+        h1 {
+      color: #333;
+    }
+
+    button {
+      padding: 20px 40px;
+      background-color: #ff16ff;
+      color: rgb(226, 219, 213);
+      border: none;
+      border-radius: 10px;
+      font-size: 24px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all;
+    }
+
+    .passcode-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    input {
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      font-size: 18px;
+      border: 2px solid #ff16ff;
+      border-radius: 5px;
+    }
+
+    .loader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: white;
+    }
+
+    .spinner {
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #ff16ff;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <audio id="bg-music" loop>
+     <source src="music.mp3" type="audio/mp3"> 
+  </audio>
+
+  <h1>🤧💗Welcome, MOJISANNN!🤧💗</h1>
+  
+  <div class="passcode-container">
+     <input type="password" id="pass1" maxlength="1" oninput="moveFocus(1)">
+     <input type="password" id="pass2" maxlength="1" oninput="moveFocus(2)">
+     <input type="password" id="pass3" maxlength="1" oninput="moveFocus(3)">
+     <input type="password" id="pass4" maxlength="1" oninput="moveFocus(4)">
+     <input type="password" id="pass5" maxlength="1" oninput="moveFocus(5)">
+     <input type="password" id="pass6" maxlength="1" oninput="moveFocus(6)">
+  </div>
+  
+  <button onclick="checkPasscode()">ส่งรหัสเลย!</button>
+
+  <script>
+    const correctPasscode = "070210"; 
+
+    function checkPasscode() {
+      const passcode = Array.from({ length: 6 }, (_, i) => document.getElementById(`pass${i + 1}`).value).join('');
+      if (passcode === correctPasscode) {
+        showLoading(song);
+      } else {
+        alert("รหัสไม่ถูกต้อง! ลองใหม่อีกครั้ง 🤧");
+      }
+    }
+
+    function showLoading(callback) {
+      document.body.innerHTML = `
+        <div class="loader">
+          <div class="spinner"></div>
+        </div>
+      `;
+      setTimeout(callback, 2000);
+    }
+
+    function song() {
+      document.body.innerHTML = `
+        <h1>🎶 Song Time! 🎶</h1>
+        <p>รู้รหัสด้วย >0< เก่งจังเลยยยยยย
+          ไปด่านต่อไปกันเลยค้าบบบบ</p>
+        <button onclick="window.location.reload()">กลับไปหน้าแรก</button>
+      `;
+      document.getElementById("bg-music").play();
+    }
+
+    function moveFocus(current) {
+      if (current < 6) {
+        document.getElementById(`pass${current + 1}`).focus();
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>#รักพี่ที่สุดเลยนะคั๊บ🥹💞#</p>
